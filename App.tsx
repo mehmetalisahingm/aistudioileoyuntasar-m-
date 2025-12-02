@@ -331,7 +331,8 @@ export default function App() {
 
   const renderCipher = () => (
     <div className="flex flex-col items-center justify-center h-full gap-8">
-      <h2 className="text-3xl font-bold text-white mb-4 text-center max-w-lg">Sandık Şifresi: <br/> <span className="text-yellow-200">Güneş -> Kalp -> Yıldız</span></h2>
+      {/* DÜZELTME YAPILAN KISIM: -> yerine &rarr; eklendi */}
+      <h2 className="text-3xl font-bold text-white mb-4 text-center max-w-lg">Sandık Şifresi: <br/> <span className="text-yellow-200">Güneş &rarr; Kalp &rarr; Yıldız</span></h2>
       <div className="flex gap-4 mb-8 bg-black/20 p-6 rounded-2xl min-h-[100px] items-center">
         {cipherInput.map((symbolId, idx) => {
           const sym = CIPHER_SYMBOLS.find(s => s.id === symbolId);
@@ -422,8 +423,8 @@ export default function App() {
         <div className="flex flex-col items-center justify-center h-full">
            <h2 className="text-4xl font-bold text-white mb-12 drop-shadow-md text-center">Ne Boyamak İstersin?</h2>
            <div className="flex gap-8 flex-wrap justify-center">
-              
-              <button 
+             
+             <button 
                  onClick={() => handleColoringPageSelect(ColoringPageType.BEAR)}
                  className="bg-white p-6 rounded-3xl shadow-xl hover:scale-105 transition-transform flex flex-col items-center gap-4 border-b-8 border-blue-200"
               >
@@ -431,7 +432,7 @@ export default function App() {
                  <span className="text-2xl font-bold text-slate-700">Sevimli Ayı</span>
               </button>
 
-              <button 
+             <button 
                  onClick={() => handleColoringPageSelect(ColoringPageType.ROCKET)}
                  className="bg-white p-6 rounded-3xl shadow-xl hover:scale-105 transition-transform flex flex-col items-center gap-4 border-b-8 border-purple-200"
               >
@@ -439,7 +440,7 @@ export default function App() {
                  <span className="text-2xl font-bold text-slate-700">Uzay Roketi</span>
               </button>
 
-              <button 
+             <button 
                  onClick={() => handleColoringPageSelect(ColoringPageType.FLOWER)}
                  className="bg-white p-6 rounded-3xl shadow-xl hover:scale-105 transition-transform flex flex-col items-center gap-4 border-b-8 border-pink-200"
               >
@@ -601,3 +602,10 @@ export default function App() {
     </div>
   );
 }
+
+
+
+
+
+
+
